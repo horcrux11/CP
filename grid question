@@ -1,0 +1,33 @@
+//grid question to start from 1,1 and reach to any particular point using x,x+y or x+y,y in minimum steps and print no. of steps
+#include <iostream>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+int n,m,c=0,k=0;
+cin>>n>>m;
+while(true)
+{
+	if(n==1 && m==1)
+	break;
+	if(n>m)
+	{
+	n=n-m;
+	c++;
+}
+else if(m>n){
+	m=m-n;
+	c++;
+}
+else {
+	k=1;
+	break;
+}
+}
+if(k==1)
+cout<<"-1"<<endl;
+else
+cout<<c<<endl;
+}
+}
